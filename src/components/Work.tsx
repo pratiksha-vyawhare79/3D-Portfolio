@@ -5,6 +5,13 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
+    title: "Vispera Studios",
+    category: "Creative Studio Website",
+    tools: "React.js, Tailwind CSS",
+    image: "/images/placeholder.webp",
+    link: "https://visperastudios.in/",
+  },
+  {
     title: "Talent Portal",
     category: "AI-Powered Recruitment Management System",
     tools: "Spring Boot, React.js, MySQL, REST APIs, JWT, Blanz AI Proctoring & Monitoring",
