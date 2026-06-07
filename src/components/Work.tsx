@@ -30,7 +30,7 @@ const projects = [
     category: "Responsive Platform & Content Management",
     tools: "React.js, Node.js, MySQL, REST APIs, Donation Tracking System",
     image: "/images/ngo_website.png",
-    link: "#",
+    link: "https://ngo-platform-7erf.vercel.app/",
   },
   {
     title: "Avani News Portal",
