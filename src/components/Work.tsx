@@ -8,7 +8,7 @@ const projects = [
     title: "Vispera Studios",
     category: "Creative Studio Website",
     tools: "React.js, Tailwind CSS",
-    image: "/images/placeholder.webp",
+    image: "/images/vispera.png",
     link: "https://visperastudios.in/",
   },
   {
