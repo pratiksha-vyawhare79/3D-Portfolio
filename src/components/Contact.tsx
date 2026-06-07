@@ -121,7 +121,7 @@ const Contact = () => {
                   GitHub <MdArrowOutward />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/pratiksha-vyawhare"
+                  href="https://www.linkedin.com/in/pratiksha-vyawhare-06a908258/"
                   target="_blank"
                   rel="noreferrer"
                   data-cursor="disable"
