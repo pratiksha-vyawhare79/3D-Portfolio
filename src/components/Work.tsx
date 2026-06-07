@@ -36,7 +36,7 @@ const projects = [
     title: "Avani News Portal",
     category: "News Management & Article Publisher",
     tools: "React.js, Spring Boot, JPA, Postgres SQL, CI/CD Pipeline Deployment",
-    image: "/images/avani_news.png",
+    image: "/images/placeholder.webp",
     link: "http://31.97.236.168/",
   },
 ];
