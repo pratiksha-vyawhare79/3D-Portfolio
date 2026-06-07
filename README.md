@@ -1,176 +1,100 @@
-# 3D Portfolio Website
+# Pratiksha Vyawhare - 3D Interactive Portfolio
 
-This repository contains the source code for a personal 3D portfolio built with React, TypeScript, Three.js, React Three Fiber, and GSAP. It includes animated page sections, a character scene, custom cursor interactions, and smooth transitions designed for a modern portfolio experience.
+Welcome to the source code for my personal 3D interactive portfolio! This project showcases my skills as a Full Stack Developer, combining a highly interactive React/Three.js frontend with a robust Spring Boot backend.
 
-Live site: [https://akashrmalhotra.netlify.app/](https://akashrmalhotra.netlify.app/)
+Live Site: [https://pratiksha-vyawhare79.github.io/3D-Portfolio](https://pratiksha-vyawhare79.github.io/3D-Portfolio) *(Note: Update this link once fully deployed)*
 
-![Portfolio Preview](public/images/preview1.png)
+---
 
-## Table of Contents
+## 🌟 Key Features
 
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Available Scripts](#available-scripts)
-- [GSAP License Note](#gsap-license-note)
-- [Customization Guide](#customization-guide)
-- [Troubleshooting](#troubleshooting)
-- [Deployment](#deployment)
-- [License](#license)
+- **Interactive 3D Experience**: A fully responsive 3D character scene built with React Three Fiber, bound to user scroll (GSAP) for an immersive storytelling experience.
+- **Full Stack Integration**: A live "Contact Me" form that sends messages directly to a custom Java Spring Boot backend.
+- **Responsive & Dynamic Design**: Tailored for all screen sizes (Mobile, Tablet, Desktop) using custom CSS modules and Tailwind CSS.
+- **Live Project Showcase**: A dynamic carousel featuring my latest work, complete with real-time screenshots and live deployment links (e.g., Vispera Studios, NGO Platform, Avani News).
 
-## Features
+---
 
-- Responsive one-page portfolio layout with reusable section components.
-- 3D character scene rendering powered by React Three Fiber and Three.js.
-- GSAP-powered animations and transitions for interactive storytelling.
-- Custom cursor, hover interactions, and scroll-driven visual effects.
-- Organized component architecture with dedicated utilities and style modules.
+## 💻 Technology Stack
 
-## Tech Stack
+### Frontend (User Interface & 3D)
+- **Framework**: React.js 18 (Vite)
+- **Styling**: Tailwind CSS + Custom Vanilla CSS modules (`.css`)
+- **3D Rendering**: `three.js`, `@react-three/fiber`, `@react-three/drei`
+- **Animations**: `gsap` (GreenSock Animation Platform) and ScrollTrigger
+- **Icons**: `react-icons`
 
-### Core
+### Backend (API & Server)
+- **Framework**: Java Spring Boot
+- **Database**: Configured for SQL (MySQL/PostgreSQL) via Spring Data JPA / Hibernate
+- **Architecture**: RESTful APIs (`/api/contact`) with full CORS configuration to allow cross-origin requests from the React frontend.
 
-- React 18
-- TypeScript
-- Vite
+---
 
-### Animation and 3D
-
-- GSAP + `@gsap/react`
-- Three.js
-- `@react-three/fiber`
-- `@react-three/drei`
-- `@react-three/postprocessing`
-- `@react-three/cannon`
-- `@react-three/rapier`
-
-### Supporting Libraries
-
-- `react-icons`
-- `react-fast-marquee`
-- `@vercel/analytics`
-
-## Project Structure
+## 📁 Project Architecture
 
 ```text
 .
-├── public/                    # Static assets
+├── backend/                   # Spring Boot Java Application (Contact API)
+│   ├── src/main/java/...      # Controllers, Services, Entities
+│   └── application.properties # Database and Server Configuration
+├── public/                    # Static Assets (Images, 3D Models, HDRIs)
 ├── src/
-│   ├── assets/                # Local media/assets
-│   ├── components/
-│   │   ├── Character/         # 3D scene + character logic/utilities
-│   │   ├── styles/            # Section/component CSS files
-│   │   ├── About.tsx
-│   │   ├── Career.tsx
-│   │   ├── Contact.tsx
-│   │   ├── Landing.tsx
-│   │   ├── MainContainer.tsx  # Main page composition
-│   │   ├── Navbar.tsx
-│   │   ├── TechStack.tsx
-│   │   ├── WhatIDo.tsx
-│   │   └── Work.tsx
-│   ├── context/               # Global providers (loading state, etc.)
-│   ├── data/                  # Static data/content definitions
-│   ├── App.tsx
-│   └── main.tsx
-├── package.json
-└── vite.config.ts
+│   ├── components/            # React Components
+│   │   ├── Character/         # 3D Scene Logic
+│   │   ├── styles/            # Scoped CSS files
+│   │   ├── About.tsx          # About Me section
+│   │   ├── Contact.tsx        # Contact Form (Connects to Spring Boot)
+│   │   ├── Landing.tsx        # Hero Section
+│   │   ├── Navbar.tsx         # Navigation & Social Links
+│   │   ├── Work.tsx           # Project Showcase Carousel
+│   │   └── ...
+│   ├── App.tsx                # Main Application Entry
+│   └── main.tsx               # React DOM Rendering
+├── package.json               # Node.js Dependencies
+└── vite.config.ts             # Vite Configuration
 ```
 
-## Getting Started
+---
 
-### Prerequisites
+## 🚀 Getting Started Locally
 
-- Node.js 18+ (recommended)
-- npm 9+ (or compatible)
+### 1. Running the Frontend (React)
 
-### Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone <your-repository-url>
-   cd 3d-portfolio
-   ```
-
-2. Install dependencies:
-
+1. Ensure you have Node.js installed.
+2. Navigate to the root directory.
+3. Install dependencies:
    ```bash
    npm install
    ```
-
-3. Start the local development server:
-
+4. Start the Vite development server:
    ```bash
    npm run dev
    ```
+5. Open your browser to `http://localhost:5173`.
 
-4. Open the URL shown in the terminal (typically `http://localhost:5173`).
+### 2. Running the Backend (Spring Boot)
 
-## Available Scripts
+1. Ensure you have Java 17+ and Maven installed.
+2. Navigate to the `backend/` directory (or open it in your Java IDE like Eclipse/IntelliJ).
+3. Update `application.properties` with your local database credentials if you wish to save messages to a local database.
+4. Run the Spring Boot application. It will start on `http://localhost:8080`.
+5. The frontend is already configured to send `POST` requests to `http://localhost:8080/api/contact`.
 
-- `npm run dev`  
-  Starts Vite dev server and exposes host for local network testing.
+---
 
-- `npm run build`  
-  Type-checks and builds a production-ready bundle.
+## 🌐 Deployment Instructions
 
-- `npm run preview`  
-  Serves the production build locally for verification.
+### Frontend (Netlify / Vercel / GitHub Pages)
+1. Run `npm run build` to generate the highly optimized production files in the `dist/` folder.
+2. Deploy the `dist/` folder to your preferred Jamstack host.
 
-- `npm run lint`  
-  Runs ESLint checks across the project.
+### Backend (Render / Railway / AWS)
+1. Package the Spring Boot application into a `.jar` file using Maven (`mvn clean package`).
+2. Deploy the `.jar` to a Java-compatible cloud hosting provider.
+3. **Important**: Once the backend is deployed, update the `fetch()` URL inside `src/components/Contact.tsx` to point to your new live backend URL (e.g., `https://my-backend.onrender.com/api/contact`).
 
-## GSAP License Note
+---
 
-This project uses the standard `gsap` package, including bonus plugins now available in the core package.
-
-- Install dependencies with `npm install`.
-- If migrating from older setups, remove `gsap-trial` from your project.
-
-Read official installation guidance here: [GSAP Installation Docs](https://gsap.com/docs/v3/Installation/)
-
-## Customization Guide
-
-You can adapt this portfolio to your own profile by updating the following areas:
-
-- **Content sections**: Edit files in `src/components/` such as `About.tsx`, `Career.tsx`, `WhatIDo.tsx`, and `Work.tsx`.
-- **Data source**: Update static values in files under `src/data/`.
-- **Styling**: Modify component styles in `src/components/styles/` and global styles in `src/index.css` / `src/App.css`.
-- **3D scene behavior**: Adjust scene logic in `src/components/Character/` and related utilities.
-- **Animations**: Tweak GSAP utilities under `src/components/utils/`.
-
-## Troubleshooting
-
-- **Blank screen in development**  
-  Check browser console for module import errors and verify all dependencies are installed.
-
-- **3D performance issues on low-end devices**  
-  Reduce scene complexity and post-processing effects in the character/scene utilities.
-
-- **GSAP plugin errors**  
-  Ensure you have the correct plugin package and license configuration for your target environment.
-
-- **TypeScript build failures**  
-  Run `npm run build` and address reported type errors before deploying.
-
-## Deployment
-
-1. Create a production build:
-
-   ```bash
-   npm run build
-   ```
-
-2. Validate locally:
-
-   ```bash
-   npm run preview
-   ```
-
-3. Deploy the generated `dist/` folder to your hosting provider (for example Vercel, Netlify, or Cloudflare Pages).
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
+## 📄 License
+This project is open-source and available under the MIT License.
