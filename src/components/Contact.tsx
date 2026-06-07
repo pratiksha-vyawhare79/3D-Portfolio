@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MdArrowOutward, MdCopyright } from "react-icons/md";
+import { MdArrowOutward, MdCopyright, MdEmail, MdPhone } from "react-icons/md";
 import "./styles/Contact.css";
 
 const Contact = () => {
@@ -65,18 +65,18 @@ const Contact = () => {
                 <a
                   href="mailto:pratikshavyawhare79@gmail.com"
                   data-cursor="disable"
-                  className="hover:text-teal-400 transition-colors"
+                  className="hover:text-teal-400 transition-colors flex items-center gap-2"
                 >
-                  Email: pratikshavyawhare79@gmail.com
+                  <MdEmail /> Email: pratikshavyawhare79@gmail.com
                 </a>
               </p>
               <p className="mb-6">
                 <a
-                  href="tel:7666095620"
+                  href="tel:+917666095620"
                   data-cursor="disable"
-                  className="hover:text-teal-400 transition-colors"
+                  className="hover:text-teal-400 transition-colors flex items-center gap-2"
                 >
-                  Phone: +91 7666095620
+                  <MdPhone /> Phone: +91 7666095620
                 </a>
               </p>
               <p className="opacity-90">Pune, Maharashtra, India</p>
