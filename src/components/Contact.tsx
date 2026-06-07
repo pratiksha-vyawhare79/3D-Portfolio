@@ -112,7 +112,7 @@ const Contact = () => {
               <h4 className="text-xl font-semibold opacity-60 mb-4">Socials</h4>
               <div className="flex flex-col gap-3">
                 <a
-                  href="https://github.com/pratikshavyawhare79"
+                  href="https://github.com/pratiksha-vyawhare79"
                   target="_blank"
                   rel="noreferrer"
                   data-cursor="disable"
